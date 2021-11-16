@@ -46,10 +46,10 @@
             <select class="custom-select" name="gender">
               <option {% if person is None %} selected {% endif %}>Select Gender</option>
               <option value="m"
-              {% if person.gender == 'm' %} selected {% endif %}
+              {% if person.gender == 'male' %} selected {% endif %}
               >Male</option>
               <option value="f"
-              {% if person.gender == 'f' %} selected {% endif %}
+              {% if person.gender == 'female' %} selected {% endif %}
               >Female</option>
             </select>
 
