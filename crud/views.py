@@ -1,6 +1,6 @@
 from django import forms
 from django.shortcuts import redirect, render
-from django.views.generic import TemplateView, View, DetailView
+from django.views.generic import TemplateView, DetailView, DeleteView
 from django.views.generic.list import ListView
 from .models import Person, PersonModelForm
 
@@ -34,3 +34,8 @@ class PersonDetailView(DetailView):
         return redirect('/')
 
 
+def delete(request, pk):
+    print(pk)
+    model = Person.objects.get(pk=pk)
+    model.delete()
+    return redirect('/')

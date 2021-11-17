@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('create', PersonCreateView.as_view()),
     path('person/<pk>', PersonDetailView.as_view()),
+    path('person/<int:pk>/delete', delete),
     path('', IndexView.as_view())
 ]

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Signin Template for Bootstrap</title>
+    <title>CRUD App</title>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -27,6 +27,7 @@
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Birthday</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
@@ -36,6 +37,7 @@
                   <td><a href="/person/{{person.id}}">{{person.fname}}</a></td>
                   <td>{{person.lname}}</td>
                   <td>{{person.birthday}}</td>
+                  <td><a style="color:red" href="/person/{{person.id}}/delete">Delete</a></td>
                 </tr>
               {% endfor %}
             </tbody>
